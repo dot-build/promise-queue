@@ -20,7 +20,7 @@ function clean() {
 }
 
 function reset() {
-    Queue = require('..');
+    Queue = require('..').Queue;
 }
 
 function configure() {
@@ -33,7 +33,7 @@ describe('queue export', function () {
     });
 
     it('queue should be exported in commonjs environment', function () {
-        expect(require('..')).to.be.a('function');
+        expect(require('..').Queue).to.be.a('function');
     });
 
     it('queue should be exported in AMD environment', function () {
